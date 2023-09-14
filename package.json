@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./index",
-    "influx": "node ./InFlux/index.js"
+    "start": "node  --max-old-space-size=3072 ./index",
+    "influx": "node --max-old-space-size=3072 ./InFlux/index.js"
   },
   "type": "module",
   "author": "",
@@ -14,6 +14,11 @@
   "dependencies": {
     "@influxdata/influxdb3-client": "^0.2.0",
     "mongodb": "^6.0.0",
-    "mongoose": "^7.5.0"
+    "mongoose": "^7.5.0",
+    "mysql2": "^3.6.1",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.33.0",
+    "sequelize-cli": "^6.6.1"
   }
 }
