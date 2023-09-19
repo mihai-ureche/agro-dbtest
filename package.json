@@ -12,10 +12,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@influxdata/influxdb-client": "^1.33.2",
     "@influxdata/influxdb3-client": "^0.2.0",
     "mongodb": "^6.0.0",
     "mongoose": "^7.5.0",
     "mysql2": "^3.6.1",
+    "object-sizeof": "^2.6.3",
     "pg": "^8.11.3",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.33.0",

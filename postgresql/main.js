@@ -103,9 +103,9 @@ export const writeToPostgresql = (d, cb) => {
   });
 };
 
-const generateRandomMinutes = (refDate, gap) => {
-  const minMinutes = 480;
-  const maxMinutes = 720;
+export const generateRandomMinutes = (refDate, gap) => {
+  const minMinutes = 120;
+  const maxMinutes = 240;
 
   const r = new Date(refDate);
   const addMinutes = Math.floor(
@@ -119,8 +119,6 @@ const generateRandomMinutes = (refDate, gap) => {
 };
 
 export const testReadingPostgresql = () => {
-  console.info("Test reading from Postgresql");
-
   const runTest = (opt, done) => {
     let interval = generateRandomMinutes(opt.refDate, opt.gap);
 
@@ -162,7 +160,6 @@ export const testReadingPostgresql = () => {
   };
 
   var c = 0;
-  console.info("Run async reading test ");
   const startTest = () => {
     let refDate = "2023-09-7";
     let gap = 1;
